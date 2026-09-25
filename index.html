@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>ECHO DEBT</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- START SCREEN -->
+<div id="start-screen" class="screen">
+  <h1 class="title">ECHO DEBT</h1>
+  <p class="tagline">Every action has a cost. Every past has an echo.</p>
+  <button id="play-btn" class="btn">PLAY</button>
+  <button id="how-btn" class="btn btn-secondary">HOW TO PLAY</button>
+</div>
+
+<!-- HOW TO PLAY SCREEN -->
+<div id="how-screen" class="screen hidden">
+  <h2>How To Play</h2>
+  <ul class="rules">
+    <li>Move with arrows / WASD / on-screen buttons.</li>
+    <li>Every move you make is recorded.</li>
+    <li>Press <b>RETRY</b> to restart the level — your last attempt becomes a transparent <b>Echo</b> that repeats its moves automatically.</li>
+    <li>Stand your Echo on a <b>switch (◆)</b> to open a <b>door (▦)</b> so your current self can pass.</li>
+    <li>Reach the glowing <b>exit (◉)</b> to complete the level.</li>
+  </ul>
+  <button id="back-btn" class="btn">BACK</button>
+</div>
+
+<!-- GAME SCREEN -->
+<div id="game-screen" class="screen hidden">
+  <div class="hud">
+    <span id="level-label">LEVEL 1</span>
+    <span id="debt-label">ECHO DEBT: 0</span>
+  </div>
+
+  <div id="board" class="board"></div>
+
+  <div class="controls">
+    <button id="retry-btn" class="btn btn-small">RETRY (USE ECHO)</button>
+    <button id="restart-level-btn" class="btn btn-small btn-secondary">RESTART LEVEL</button>
+  </div>
+
+  <div class="touch-controls">
+    <div></div>
+    <button class="dpad" data-dir="up">▲</button>
+    <div></div>
+    <button class="dpad" data-dir="left">◀</button>
+    <button class="dpad" data-dir="wait">●</button>
+    <button class="dpad" data-dir="right">▶</button>
+    <div></div>
+    <button class="dpad" data-dir="down">▼</button>
+    <div></div>
+  </div>
+</div>
+
+<!-- VICTORY SCREEN -->
+<div id="victory-screen" class="screen hidden">
+  <h1 class="title">ALL LEVELS CLEARED</h1>
+  <p class="tagline">Your past self finally forgives you.</p>
+  <button id="play-again-btn" class="btn">PLAY AGAIN</button>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
